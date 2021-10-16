@@ -1,13 +1,14 @@
-package com.marcelo.nybooks
+package com.marcelo.nybooks.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.marcelo.nybooks.R
 
-class MainActivity : AppCompatActivity()
+class BooksActivity : AppCompatActivity()
 {
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_books)
     }
 }
