@@ -20,6 +20,8 @@ android {
         buildConfigField "String", "URL_BASE", "\"https://api.nytimes.com/svc/books/v3/\""
     }
 
+    buildTypes.each { it.buildConfigField 'String', 'KEY_BOOKS_API', KEY_BOOKS_API }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -58,6 +60,7 @@ dependencies {
 
     //Libs Moshi
     implementation "com.squareup.moshi:moshi:$moshi_version"
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:$moshi_version")
 
     //Libs Tests Application
     testImplementation 'junit:junit:4.13.2'
