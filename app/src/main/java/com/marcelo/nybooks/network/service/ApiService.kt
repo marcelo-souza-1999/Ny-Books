@@ -13,5 +13,5 @@ object ApiService {
             .build()
     }
 
-    val service = startRetrofit().create(NYTBooksService::class.java)
+    val service: NYTBooksService = startRetrofit().create(NYTBooksService::class.java)
 }
