@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NyBooks">
         <activity
+            android:name=".ui.activity.BookDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.BooksActivity"
             android:exported="true">
             <intent-filter>

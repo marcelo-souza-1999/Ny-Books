@@ -25,7 +25,8 @@ class BooksViewModel : ViewModel() {
                         {
                             val book = Books(
                                 title = result.bookDetails[0].title,
-                                author = result.bookDetails[0].author
+                                author = result.bookDetails[0].author,
+                                description = result.bookDetails[0].description
                             )
                             books.add(book)
                         }

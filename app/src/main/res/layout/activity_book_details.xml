@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.activity.BookDetailsActivity">
+
+    <TextView
+        android:id="@+id/txtTitleDetailsBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/title_book_detail"
+        android:textColor="#151515"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtTitleBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:textColor="#151515"
+        tools:text="Titulo do Livro" />
+
+    <TextView
+        android:id="@+id/txtDescritpionDetailsBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/text_description_book_detail"
+        android:layout_marginTop="8dp"
+        android:textColor="#151515"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDescriptionBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:textColor="#151515"
+        tools:text="Descrição do Livro" />
+
+</LinearLayout>

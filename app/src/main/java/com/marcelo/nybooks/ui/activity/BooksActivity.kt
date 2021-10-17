@@ -32,10 +32,12 @@ class BooksActivity : AppCompatActivity() {
             it?.let { books ->
                 with(recyclerBooks)
                 {
-                    layoutManager =
-                        LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
+                    layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
                     setHasFixedSize(true)
-                    adapter = BooksListAdapter(books)
+                    adapter = BooksListAdapter(books) { book ->
+                        val intent = BookDetailsActivity.getStartIntent(this@BooksActivity, book.title, book.description)
+                        this@BooksActivity.startActivity(intent)
+                    }
                 }
             }
         })
