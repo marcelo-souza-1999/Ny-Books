@@ -3,15 +3,17 @@ package com.marcelo.nybooks.ui.activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.marcelo.nybooks.R
+import com.marcelo.nybooks.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_book_details.*
+import kotlinx.android.synthetic.main.include_toolbar.*
 
-class BookDetailsActivity : AppCompatActivity() {
+class BookDetailsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_details)
 
+        setupToolbar(toolbarMain, R.string.book_details_title, true)
         getDataBook()
     }
 
