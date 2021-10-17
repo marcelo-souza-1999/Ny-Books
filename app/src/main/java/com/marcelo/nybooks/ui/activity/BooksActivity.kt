@@ -7,23 +7,19 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.marcelo.nybooks.R
-import com.marcelo.nybooks.network.model.Books
 import com.marcelo.nybooks.ui.adapter.BooksListAdapter
+import com.marcelo.nybooks.ui.base.BaseActivity
 import com.marcelo.nybooks.ui.viewmodel.BooksViewModel
 import kotlinx.android.synthetic.main.activity_books.*
+import kotlinx.android.synthetic.main.include_toolbar.*
 
-class BooksActivity : AppCompatActivity() {
+class BooksActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_books)
 
-        setupToolbar()
+        setupToolbar(toolbarMain, R.string.title_toolbar)
         setupViewModel()
-    }
-
-    private fun setupToolbar() {
-        toolbarMain.title = getString(R.string.title_toolbar)
-        setSupportActionBar(toolbarMain)
     }
 
     private fun setupViewModel() {
@@ -32,10 +28,15 @@ class BooksActivity : AppCompatActivity() {
             it?.let { books ->
                 with(recyclerBooks)
                 {
-                    layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
+                    layoutManager =
+                        LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
                     setHasFixedSize(true)
                     adapter = BooksListAdapter(books) { book ->
-                        val intent = BookDetailsActivity.getStartIntent(this@BooksActivity, book.title, book.description)
+                        val intent = BookDetailsActivity.getStartIntent(
+                            this@BooksActivity,
+                            book.title,
+                            book.description
+                        )
                         this@BooksActivity.startActivity(intent)
                     }
                 }

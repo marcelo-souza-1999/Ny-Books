@@ -5,6 +5,7 @@
     <string name="title_toolbar">Books</string>
 
     <!--  Strings in BookDetailsActivity -->
+    <string name="book_details_title">Book Detail</string>
     <string name="title_book_detail">Title</string>
     <string name="text_description_book_detail">Description</string>
 </resources>
