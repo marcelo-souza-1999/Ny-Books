@@ -9,14 +9,13 @@ import com.marcelo.nybooks.ui.adapter.BooksListAdapter
 import com.marcelo.nybooks.ui.base.BaseActivity
 import com.marcelo.nybooks.ui.viewmodel.BooksViewModel
 import kotlinx.android.synthetic.main.activity_books.*
-import kotlinx.android.synthetic.main.include_toolbar.*
 
 class BooksActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_books)
 
-        setupToolbar(toolbarMain, R.string.app_name, false)
+        setupToolbar(toolbarMain, R.string.app_name)
         setupViewModel()
     }
 
