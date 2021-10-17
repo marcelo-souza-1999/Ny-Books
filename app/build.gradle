@@ -42,6 +42,14 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
 
+    //Libs LifeCycle Extensions
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycler_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycler_version"
+
+    //Libs Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
     //Libs Tests Application
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
