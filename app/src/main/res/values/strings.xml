@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Ny Books</string>
+
+    <!-- String in Toolbar BooksActivity -->
     <string name="title_toolbar">Books</string>
+
+    <!--  Strings in BookDetailsActivity -->
+    <string name="title_book_detail">Title</string>
+    <string name="text_description_book_detail">Description</string>
 </resources>
