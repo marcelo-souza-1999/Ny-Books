@@ -17,6 +17,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "URL_BASE", "\"https://api.nytimes.com/svc/books/v3/\""
     }
 
     buildTypes {
@@ -49,6 +50,14 @@ dependencies {
     //Libs Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    //Libs Retrofit and Moshi
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+
+    //Libs Moshi
+    implementation "com.squareup.moshi:moshi:$moshi_version"
 
     //Libs Tests Application
     testImplementation 'junit:junit:4.13.2'
