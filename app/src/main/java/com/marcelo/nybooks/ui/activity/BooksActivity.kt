@@ -2,8 +2,6 @@ package com.marcelo.nybooks.ui.activity
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.marcelo.nybooks.R
@@ -18,13 +16,13 @@ class BooksActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_books)
 
-        setupToolbar(toolbarMain, R.string.title_toolbar)
+        setupToolbar(toolbarMain, R.string.app_name, false)
         setupViewModel()
     }
 
     private fun setupViewModel() {
         val viewModel: BooksViewModel by viewModels()
-        viewModel.booksLiveData.observe(this, Observer {
+        viewModel.booksLiveData.observe(this, {
             it?.let { books ->
                 with(recyclerBooks)
                 {
@@ -42,6 +40,17 @@ class BooksActivity : BaseActivity() {
                 }
             }
         })
+
+        viewModel.viewFlipperLiveData.observe(this, {
+            it?.let {viewFlipper ->
+                viewFlipperBooks.displayedChild = viewFlipper.first
+                viewFlipper.second?.let {msgErrorId ->
+                    textViewShowError.text = getString(msgErrorId)
+                }
+            }
+
+        })
+
         viewModel.getBooks()
 
         //val viewModel:  BooksViewModel = ViewModelProvider(this).get(BooksViewModel::class.java)

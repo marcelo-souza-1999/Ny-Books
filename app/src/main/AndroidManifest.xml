@@ -13,6 +13,7 @@
         android:theme="@style/Theme.NyBooks">
         <activity
             android:name=".ui.activity.BookDetailsActivity"
+            android:parentActivityName=".ui.activity.BooksActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activity.BooksActivity"

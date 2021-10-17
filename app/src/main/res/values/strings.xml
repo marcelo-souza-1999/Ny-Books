@@ -8,4 +8,9 @@
     <string name="book_details_title">Book Detail</string>
     <string name="title_book_detail">Title</string>
     <string name="text_description_book_detail">Description</string>
+
+    <!-- Strings Get Errors -->
+    <string name="books_error_401">Não Autorizado</string>
+    <string name="books_error_400_generic">Erro não identificado</string>
+    <string name="books_error_500">Erro 500</string>
 </resources>
