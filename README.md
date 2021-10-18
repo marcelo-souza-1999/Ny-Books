@@ -10,6 +10,7 @@ Neste aplicativo eu chequei a Books Api, onde apliquei o bom uso da arquitetura 
 ## Tecnologias utlizadas no aplicativo
 
 * Linguagem de Programação Kotlin
+* Android Studio
 * Arquitetura MVVM
 * ViewBinding
 * ViewModel
