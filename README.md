@@ -5,7 +5,7 @@ Neste aplicativo eu chequei a Books Api, onde apliquei o bom uso da arquitetura 
 
 ## O endpoint utilizado nesse aplicativo foi:
 
-1. [lists.json](https://api.nytimes.com/svc/books/v3/lists.json)
+1. [lists.json](https://developer.nytimes.com/docs/books-product/1/overview)
 
 ## Tecnologias utlizadas no aplicativo
 
