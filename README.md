@@ -30,7 +30,7 @@ Koin ou Dagger (estou praticando para usar usando esses frameworks), e também n
 ## Funcionalidades
 
 - Primeira activity do aplicativo exibi uma lista de livros exibindo os títulos e os autores do mesmo, ao clicar em cima de um item da lista é exibido uma segunda
-- activity onde é exibido o título do livro escolhido na primeira activity e exibe a descrição do livro escolhido.
+activity onde é exibido o título do livro escolhido na primeira activity e exibe a descrição do livro escolhido.
 
 ## Desenvolvedor
 
