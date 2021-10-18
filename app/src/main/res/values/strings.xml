@@ -11,6 +11,6 @@
 
     <!-- Strings Get Errors -->
     <string name="books_error_401">Não Autorizado</string>
-    <string name="books_error_400_generic">Erro não identificado</string>
-    <string name="books_error_500">Erro 500</string>
+    <string name="books_error_400_generic">Aconteceu um erro inesperado</string>
+    <string name="books_error_500">Erro interno do servidor</string>
 </resources>
