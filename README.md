@@ -24,6 +24,8 @@ Koin ou Dagger (estou praticando para usar usando esses frameworks), e também n
 * Moshi Kotlin Codegen
 * Mockito Kotlin
 * Core Testing
+* JUnit Test
+* Mockito Test
 
 ## Funcionalidades
 
