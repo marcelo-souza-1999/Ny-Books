@@ -1,10 +1,7 @@
 ## NY Books API - The Books API provides information about book reviews and The New York Times Best Sellers lists.
 
-Este projeto teve como proposta melhorar meus conhecimentos no desenvolvimento Android seguindo a risca a arquitetura MVVM,
-divisão de camadas, injeção de dependências, desacoplamento de responsabilidades entre as classes, praticando o uso de Testes Unitários. 
-E conexão via Retrofit a uma API externa. 
-Neste projeto eu chequei a Books Api, aplicando o bom uso da arquitetura MVVM, desacoplamento de responsabilidades entre as classes, injeção de dependências sem usar
-Koin ou Dagger (estou praticando para usar usando esses frameworks), e também nesse projeto apliquei o Teste Unitário com o Mock na parte de ViewModel do projeto.
+Aplicativo Android cuja proposta foi melhorar meus conhecimentos no desenvolvimento Android nativo seguindo a risca o padrão da Arquitetura MVVM, divisão de camadas, inversão de dependência, injeção de dependência, desacoplamento de responsabilidades entre as classes, praticando o uso de Testes Unitários. E conexão via Retrofit a uma API externa. 
+Neste aplicativo eu chequei a Books Api, onde apliquei o bom uso da arquitetura MVVM, desacoplamento de responsabilidades entre as classes, injeção de dependências sem usar Koin ou Dagger (estou praticando para realizar injeção de dependêcia usando esses frameworks), e também nesse projeto apliquei o Teste Unitário com o Mock na unidade de ViewModel do projeto.
 
 ## O endpoint utilizado nesse aplicativo foi:
 
