@@ -7,7 +7,7 @@ Neste aplicativo eu chequei a Books Api, onde apliquei o bom uso da arquitetura 
 
 1. [lists.json](https://developer.nytimes.com/docs/books-product/1/overview)
 
-## Tecnologias utlizadas no aplicativo
+## Tecnologias utilizadas no aplicativo
 
 * Linguagem de Programação Kotlin
 * Android Studio

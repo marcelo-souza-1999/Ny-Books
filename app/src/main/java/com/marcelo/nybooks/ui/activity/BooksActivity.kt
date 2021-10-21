@@ -25,8 +25,8 @@ class BooksActivity : BaseActivity() {
         val viewModel: BooksViewModel = BooksViewModel.ViewModelFactory(BooksApiDataSource())
             .create(BooksViewModel::class.java)
 
-        viewModel.booksLiveData.observe(this, {
-            it?.let { books ->
+        viewModel.booksLiveData.observe(this, {setRecycler->
+            setRecycler?.let { books ->
                 with(recyclerBooks)
                 {
                     layoutManager =
@@ -44,8 +44,8 @@ class BooksActivity : BaseActivity() {
             }
         })
 
-        viewModel.viewFlipperLiveData.observe(this, {
-            it?.let {viewFlipper ->
+        viewModel.viewFlipperLiveData.observe(this, {pairs->
+            pairs?.let {viewFlipper ->
                 viewFlipperBooks.displayedChild = viewFlipper.first
                 viewFlipper.second?.let {msgErrorId ->
                     textViewShowError.text = getString(msgErrorId)

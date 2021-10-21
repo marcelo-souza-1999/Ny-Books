@@ -36,7 +36,7 @@ class BooksListAdapter(
             author.text = book.author
 
             itemView.setOnClickListener {
-                onItemClickListener.invoke(book)
+                onItemClickListener(book)
             }
         }
     }
