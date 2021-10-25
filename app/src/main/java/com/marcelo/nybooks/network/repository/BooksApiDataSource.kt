@@ -11,7 +11,7 @@ class BooksApiDataSource : BooksRepository {
 
     override fun getBooks(booksResultCallback: (result: BooksResult) -> Unit)
     {
-        ApiService.service.getBooks().enqueue(object : Callback<BooksBodyResponse?>
+        ApiService.serviceBooks().getBooks().enqueue(object : Callback<BooksBodyResponse?>
         {
             override fun onResponse(call: Call<BooksBodyResponse?>, response: Response<BooksBodyResponse?>)
             {
