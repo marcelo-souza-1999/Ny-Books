@@ -13,9 +13,7 @@ val viewModule = module {
     }
 
     viewModel {
-        BooksViewModel(
-            dataSource = get()
-        )
+        BooksViewModel(get())
     }
 }
 
