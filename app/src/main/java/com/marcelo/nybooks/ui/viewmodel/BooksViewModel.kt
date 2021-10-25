@@ -5,10 +5,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.marcelo.nybooks.R
 import com.marcelo.nybooks.network.model.Books
+import com.marcelo.nybooks.network.repository.BooksApiDataSource
 import com.marcelo.nybooks.network.repository.BooksRepository
 import com.marcelo.nybooks.network.repository.BooksResult
 
-class BooksViewModel(private val dataSource: BooksRepository) : ViewModel() {
+class BooksViewModel(private val dataSource: BooksApiDataSource) : ViewModel() {
+
     val booksLiveData: MutableLiveData<List<Books>> = MutableLiveData()
     val viewFlipperLiveData: MutableLiveData<Pair<Int, Int?>> = MutableLiveData()
 
@@ -32,14 +34,6 @@ class BooksViewModel(private val dataSource: BooksRepository) : ViewModel() {
                     viewFlipperLiveData.value = Pair(VIEW_FLIPPER_ERROR, R.string.books_error_500)
                 }
             }
-        }
-    }
-
-    class ViewModelFactory(val dataSource: BooksRepository) : ViewModelProvider.Factory {
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(BooksViewModel::class.java))
-                return BooksViewModel(dataSource) as T
-            throw IllegalArgumentException("Classe ViewModel desconhecida")
         }
     }
 

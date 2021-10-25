@@ -4,13 +4,16 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.marcelo.nybooks.R
-import com.marcelo.nybooks.network.repository.BooksApiDataSource
 import com.marcelo.nybooks.ui.adapter.BooksListAdapter
 import com.marcelo.nybooks.ui.base.BaseActivity
 import com.marcelo.nybooks.ui.viewmodel.BooksViewModel
 import kotlinx.android.synthetic.main.activity_books.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class BooksActivity : BaseActivity() {
+
+    private val viewModel: BooksViewModel by viewModel()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_books)
@@ -21,9 +24,6 @@ class BooksActivity : BaseActivity() {
 
     private fun setupViewModel() {
         //val viewModel:  BooksViewModel = ViewModelProvider(this).get(BooksViewModel::class.java)
-
-        val viewModel: BooksViewModel = BooksViewModel.ViewModelFactory(BooksApiDataSource())
-            .create(BooksViewModel::class.java)
 
         viewModel.booksLiveData.observe(this, {setRecycler->
             setRecycler?.let { books ->
